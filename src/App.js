@@ -1,10 +1,28 @@
 import React from 'react';
+import { createBrowserRouter } from 'react-router-dom';
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <h1>hello</h1>
+  },
+  {
+    path: "/pastes",
+    element: <h1>hello2</h1>
+
+  },
+  {
+    path: "/pastes/:id",
+    element: <h1>hello3</h1>
+  }
+])
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-500">Hello, Tailwind CSS in React!</h1>
+    <div>
+      <h1>hello</h1>
     </div>
+
+
   );
 }
 
