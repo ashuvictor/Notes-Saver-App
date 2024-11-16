@@ -33,7 +33,7 @@ const pasteSlice = createSlice({
     },
     removeFromPastes: (state, action) => {
       const id = action.payload;
-      state.pastes = state.pastes.filter((paste) => paste.id !== id);
+      state.pastes = state.pastes.filter((paste) => paste._id !== id);
       localStorage.setItem('pastes', JSON.stringify(state.pastes));
       toast.success('Paste removed successfully');
     },
