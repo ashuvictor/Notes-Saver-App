@@ -1,25 +1,40 @@
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
-
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import NavBar from './components/Navbar';
+import Home from './components/Home';
+import Paste from './components/Paste';
+import ViewPaste from './components/ViewPaste';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <h1>hello</h1>
+    element:
+      <div>
+        <NavBar />
+        <Home />
+      </div>
   },
   {
     path: "/pastes",
-    element: <h1>hello2</h1>
+    element:
+      <div>
+        <NavBar />
+        <Paste />
+      </div>
 
   },
   {
     path: "/pastes/:id",
-    element: <h1>hello3</h1>
+    element:
+      <div>
+        <NavBar />
+        <ViewPaste />
+      </div>
   }
 ])
 function App() {
   return (
     <div>
-      <h1>hello</h1>
+      <RouterProvider router={router} />
     </div>
 
 
